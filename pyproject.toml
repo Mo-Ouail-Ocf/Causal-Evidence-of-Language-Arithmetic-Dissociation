@@ -1,0 +1,30 @@
+[project]
+name = "language-arithmetic-dissociation-causal-evidence"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.4"
+dependencies = [
+    "accelerate>=1.10.0",
+    "datasets>=4.0.0",
+    "matplotlib>=3.10.5",
+    "pandas>=2.3.1",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "torch>=2.8.0",
+    "transformers>=4.55.0",
+]
+
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]

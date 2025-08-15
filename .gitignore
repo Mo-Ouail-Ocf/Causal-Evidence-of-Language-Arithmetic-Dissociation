@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.json
+*.log
+*.png
+*.git
+pics/
+results_*/
+data/
+.venv/
